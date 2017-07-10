@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+    </div>
+    <section id="container">
+        <ul>
+            <li class="first">one</li>
+            <li class="second">two</li>
+            <li class="third">three</li>
+        </ul>
+        <ol>
+            <li class="first">one</li>
+            <li class="second">two</li>
+            <li class="third">three</li>
+        </ol>
+    </section>
+    <div class="footer">
+    </div>
+    <script>
+        // 1
+        var container2 = document.getElementById("container");
+
+        // 2
+        var container = document.querySelector("#container");
+
+        // 3
+        var secondListItems = document.querySelectorAll(".second");
+
+        // 4
+        var olSecond = document.querySelector("ol .third");
+
+        // 5
+        container.innerText = "Hello!";
+
+        // 6
+        var footerDiv = document.getElementsByClassName("footer")[0];
+        footerDiv.classList.add("main");
+
+        // 7
+        footerDiv.classList.remove("main");
+
+        // 8
+        var newListItem = document.createElement("li");
+
+        // 9
+        newListItem.innerText = "four";
+
+        // 10
+        var ul = document.querySelector("ul");
+        ul.appendChild(newListItem);
+
+        // 11
+        var oListItems = document.querySelectorAll("ol li");
+
+        for (var i = 0; i < oListItems.length; i++) {
+            oListItems[i].style["background-color"] = "green";
+        }
+
+        // 12
+        var body = document.querySelector("body");
+        body.removeChild(footerDiv);
+        
+    </script>
+</body>
+</html>
